@@ -1,0 +1,42 @@
+PRELIMINARIES: ALL OF THE PROGRAMS WERE EXECUTED
+ON A VIRTUAL ENVIROMENT NAMED : python_3_10
+For the user to be able to reproduce them he must
+replicate this venv on his IDE.
+For this purpose there exists in the zip folder
+a "requirements.txt" with all the libraries included
+
+
+-------------For Both Models Inclusive------------------------------
+Each model is in its own file : GreedyOpt & LSTM
+Per model we go and :
+1) Run the DataCollector and the DataPreparator.py modules
+
+***** It is prefared to always keep an short sight view on the report
+in order to be fully aware on how each module operates:
+
+-------------For the Greedy Optimization Algorithm -----------------
+2) Run the GreedyOptimizationAlgorith.py module first from its file
+3) Run the GreedyAlgorithmTester.py
+4) To view the plots : 
+----Open in the GreedyOpt file the subject file named:  results  
+There the user can see every plot.The numerical results are printed
+out both on spyder console and then in an csv format in the results file
+
+------------ For the LSTM Trading Agent -----------------------------
+1) Open the LSTM Module: 
+---Rerun the DataCollector and DataPreparator if the 
+---VariableHolder interfece on spyder hasnt kept the original data. 
+
+2) Then run the LSTM_Base file
+3) Then run the LSTM_Result_New file
+
+********************** Disclaimer ****************************
+ In my case I had the issue of kernel death due to the 
+high amount of data being processed as a unique tensor on the CPU.
+Thus the Neural Networks (LSTM) capabilities are limited, e.g the epochs 
+were kept small and the number of gates were limited aswell in order to 
+avoid more stress on the hardware. I tried to resolve this problem by changing the structure
+of the algorithm to backtest the porftolio in smaller batches but neither a significant improvement
+was found.
+
+
